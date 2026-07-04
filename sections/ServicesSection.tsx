@@ -63,74 +63,73 @@ const services = [
 ];
 
 const ServicesSection = () => {
-  return (
-    <section id="services" className="relative py-24 lg:py-32 bg-dark-primary overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-brand-purple/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl"></div>
-      </div>
+   return (
+     <section id="services" className="relative py-20 sm:py-24 lg:py-32 bg-dark-primary overflow-hidden">
+       <div className="absolute inset-0 -z-10">
+         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <SectionHeader
-          badge="What I Do"
-          badgeColor="purple"
-          heading={
-            <>
-              Services that <span className="gradient-text">Elevate Brands</span>
-            </>
-          }
-          subheading="From concept to execution, I deliver end-to-end creative solutions that help businesses thrive in the digital age."
-        />
+       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+         <SectionHeader
+           badge="What I Do"
+           badgeColor="purple"
+           heading={
+             <>
+               Services that <span className="gradient-text">Elevate Brands</span>
+             </>
+           }
+           subheading="From concept to execution, I deliver end-to-end creative solutions that help businesses thrive in the digital age."
+         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="group relative"
-            >
-              <div className="glass-card rounded-3xl p-8 lg:p-10 h-full flex flex-col card-hover">
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className={`h-7 w-7 ${service.iconColor}`} />
-                </div>
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+           {services.map((service, index) => (
+             <motion.div
+               key={service.title}
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.5, delay: index * 0.1 }}
+               whileHover={{ y: -8 }}
+               className="group relative h-full"
+             >
+               <div className="glass-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 h-full flex flex-col card-hover">
+                 {/* Icon */}
+                 <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br ${service.gradient} mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                   <service.icon className={`h-5 w-5 sm:h-6 sm:w-7 ${service.iconColor}`} />
+                 </div>
 
-                {/* Content */}
-                <h3 className="text-xl font-bold text-light-primary mb-3">{service.title}</h3>
-                <p className="text-light-secondary leading-relaxed mb-6 flex-grow">{service.description}</p>
+                 {/* Content */}
+                 <h3 className="text-lg sm:text-xl font-bold text-light-primary mb-2.5 sm:mb-3">{service.title}</h3>
+                 <p className="text-light-secondary leading-relaxed mb-5 sm:mb-6 flex-grow text-sm sm:text-base">{service.description}</p>
 
-                {/* Deliverables */}
-                <div className="space-y-2.5 mb-6">
-                  {service.deliverables.map((item) => (
-                    <div key={item} className="flex items-center space-x-2.5 text-sm text-light-muted">
-                      <span className={`h-1.5 w-1.5 rounded-full bg-${service.accent}-400`}></span>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+                 {/* Deliverables */}
+                 <div className="space-y-2 mb-5 sm:mb-6">
+                   {service.deliverables.map((item) => (
+                     <div key={item} className="flex items-center space-x-2 sm:space-x-2.5 text-xs sm:text-sm text-light-muted">
+                       <span className={`h-1.5 w-1.5 rounded-full bg-${service.accent}-400`}></span>
+                       <span>{item}</span>
+                     </div>
+                   ))}
+                 </div>
 
-                {/* CTA */}
-                <Link 
-                  href="#contact" 
-                  className={`inline-flex items-center text-sm font-semibold text-${service.accent}-400 hover:text-${service.accent}-300 transition-colors mt-auto group/link`}
-                >
-                  Get Started
-                  <Sparkles className="ml-1.5 h-3.5 w-3.5 group-hover/link:translate-x-1 transition-transform" />
-                </Link>
+                 {/* CTA */}
+                 <Link 
+                   href="#contact" 
+                   className={`inline-flex items-center text-xs sm:text-sm font-semibold text-${service.accent}-400 hover:text-${service.accent}-300 transition-colors mt-auto group/link min-h-[44px]`}
+                 >
+                   Get Started
+                   <Sparkles className="ml-1.5 h-3.5 w-3.5 group-hover/link:translate-x-1 transition-transform" />
+                 </Link>
 
-                {/* Hover gradient overlay */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+                 {/* Hover gradient overlay */}
+                 <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+               </div>
+             </motion.div>
+           ))}
+         </div>
+       </div>
+     </section>
+   );
+ };
 
 export default ServicesSection;

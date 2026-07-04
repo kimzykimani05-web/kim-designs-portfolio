@@ -70,10 +70,10 @@ const Header = () => {
           : 'bg-dark-primary/60 backdrop-blur-xl border-b border-transparent'
       }`}
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 lg:h-24">
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative h-11 w-11 rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
+            <div className="relative h-9 w-9 sm:h-11 sm:w-11 rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10">
               <Image
                 src="/Kim Designs/Branding For Portfolio/WhatsApp Image 2025-02-09 at 12.23.41 PM.jpeg"
                 alt="Kim Designs Logo"
@@ -82,7 +82,7 @@ const Header = () => {
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
-            <span className="text-xl lg:text-2xl font-bold text-light-primary tracking-tight">
+            <span className="text-lg sm:text-xl lg:text-2xl font-bold text-light-primary tracking-tight">
               Kim<span className="gradient-text">Designs</span>
             </span>
           </Link>
@@ -95,7 +95,7 @@ const Header = () => {
                   key={id}
                   href={`#${id}`}
                   onClick={(e) => scrollTo(e, `#${id}`)}
-                  className={`relative px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  className={`relative px-3 sm:px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                     activeSection === id
                       ? 'text-brand-cyan'
                       : 'text-light-secondary hover:text-brand-cyan'
@@ -115,19 +115,20 @@ const Header = () => {
           </nav>
 
           {/* CTA & Mobile Toggle */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <Button variant="primary" size="sm" className="hidden md:inline-flex shadow-lg shadow-brand-blue/30 hover:shadow-xl hover:shadow-brand-blue/40 transition-shadow duration-300">
               Hire Me
             </Button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2.5 rounded-xl hover:bg-dark-card transition-colors border border-transparent hover:border-white/10"
+              className="lg:hidden p-2 sm:p-2.5 rounded-xl hover:bg-dark-card transition-colors border border-transparent hover:border-white/10 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
+              aria-expanded={isOpen}
             >
               {isOpen ? (
-                <X className="h-6 w-6 text-light-primary" />
+                <X className="h-5 w-5 sm:h-6 sm:w-6 text-light-primary" />
               ) : (
-                <Menu className="h-6 w-6 text-light-primary" />
+                <Menu className="h-5 w-5 sm:h-6 sm:w-6 text-light-primary" />
               )}
             </button>
           </div>
@@ -143,13 +144,13 @@ const Header = () => {
               transition={{ duration: 0.3 }}
               className="lg:hidden overflow-hidden"
             >
-              <nav className="flex flex-col space-y-1.5 py-5 border-t border-white/10 mt-2 bg-dark-primary/95 backdrop-blur-2xl rounded-2xl px-4">
+              <nav className="flex flex-col space-y-1.5 py-4 sm:py-5 border-t border-white/10 mt-2 bg-dark-primary/95 backdrop-blur-2xl rounded-2xl px-3 sm:px-4">
                 {sections.map(({ id, label }) => (
                   <Link
                     key={id}
                     href={`#${id}`}
                     onClick={(e) => scrollTo(e, `#${id}`)}
-                    className={`px-4 py-3 rounded-2xl text-base font-semibold transition-all duration-200 ${
+                    className={`px-4 py-3 rounded-2xl text-base font-semibold transition-all duration-200 min-h-[44px] flex items-center ${
                       activeSection === id
                         ? 'text-brand-cyan bg-brand-cyan/12 border border-brand-cyan/20'
                         : 'text-light-secondary hover:text-brand-cyan hover:bg-dark-card'

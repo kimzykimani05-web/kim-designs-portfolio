@@ -20,31 +20,31 @@ const badgeColorClasses: Record<BadgeColor, string> = {
 };
 
 export const SectionHeader = ({
-  badge,
-  badgeColor = 'purple',
-  heading,
-  subheading,
-  className = '',
-}: SectionHeaderProps) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className={`text-center mb-20 ${className}`}
-    >
-      <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border ${badgeColorClasses[badgeColor]}`}>
-        {badge}
-      </span>
-      <h2 className="section-heading">
-        {heading}
-      </h2>
-      {subheading && (
-        <p className="section-subheading">
-          {subheading}
-        </p>
-      )}
-    </motion.div>
-  );
-};
+   badge,
+   badgeColor = 'purple',
+   heading,
+   subheading,
+   className = '',
+ }: SectionHeaderProps) => {
+   return (
+     <motion.div
+       initial={{ opacity: 0, y: 20 }}
+       whileInView={{ opacity: 1, y: 0 }}
+       viewport={{ once: true }}
+       transition={{ duration: 0.6 }}
+       className={`text-center mb-16 sm:mb-20 ${className}`}
+     >
+       <span className={`inline-block px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-5 sm:mb-6 border ${badgeColorClasses[badgeColor]}`}>
+         {badge}
+       </span>
+       <h2 className="section-heading">
+         {heading}
+       </h2>
+       {subheading && (
+         <p className="section-subheading">
+           {subheading}
+         </p>
+       )}
+     </motion.div>
+   );
+ };

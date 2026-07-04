@@ -40,7 +40,7 @@ export default function PortfolioGrid({
   }
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
       <AnimatePresence mode="popLayout">
         {filteredProjects.map((project, idx) => (
           <ProjectCard key={project.id} project={project} index={idx} />

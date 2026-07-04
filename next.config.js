@@ -10,8 +10,5 @@ module.exports = {
     ],
     formats: ['image/avif', 'image/webp'],
   },
-  webpack: (config) => {
-    config.resolve.alias['@'] = path.resolve(__dirname);
-    return config;
-  },
+  turbopack: {},
 };
