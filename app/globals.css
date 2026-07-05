@@ -12,6 +12,30 @@
   --gradient-start: #00C6FF;
   --gradient-mid: #3B82F6;
   --gradient-end: #8B5CF6;
+  
+  /* Spacing Scale - in pixels */
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-96: 96px;
+  --spacing-128: 128px;
+  
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 24px 0 rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 60px -15px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 40px -10px rgba(0, 198, 255, 0.4);
 }
 
 @layer base {
@@ -340,6 +364,27 @@
   animation: grain-noise 8s steps(10) infinite;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
 .hero-glass {
   background: rgba(19, 28, 49, 0.65);
   backdrop-filter: blur(24px);
@@ -368,4 +413,14 @@
 
 .word-spacing-comfortable {
   letter-spacing: -0.01em;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
