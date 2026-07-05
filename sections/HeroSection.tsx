@@ -63,80 +63,6 @@ const FloatingOrb = ({ className, style }: { className?: string; style?: React.C
   />
 );
 
-const FeaturedProjectCard = ({ project, index }: { project: any; index: number }) => (
-  <motion.div
-    key={project.id}
-    initial={{ opacity: 0, y: 24 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -24 }}
-    transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-    className="relative h-full w-full rounded-3xl overflow-hidden group"
-  >
-    <div
-      className="relative w-full h-full rounded-3xl overflow-hidden"
-      style={{
-        background:
-          'linear-gradient(180deg, rgba(19, 28, 49, 0.92) 0%, rgba(15, 23, 42, 0.96) 100%)',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        boxShadow:
-          '0 40px 100px -25px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255,255,255,0.08) inset, 0 0 80px -20px rgba(0, 198, 255, 0.2)',
-      }}
-    >
-      <div className="relative w-full h-full">
-        <Image
-          src={project.thumbnail}
-          alt={`${project.clientName} - ${project.category} project`}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-          priority={index === 0}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark-primary/95 via-dark-primary/40 to-transparent" />
-        <div className="absolute top-4 left-4">
-          <div className="flex items-center space-x-2.5">
-            <div
-              className="w-9 h-9 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
-              style={{
-                background: 'linear-gradient(135deg, #00C6FF 0%, #8B5CF6 100%)',
-                boxShadow:
-                  '0 0 20px rgba(0, 198, 255, 0.3), 0 0 0 1px rgba(255,255,255,0.1) inset',
-              }}
-            >
-              <Palette className="h-4 w-4 text-white" aria-hidden="true" />
-            </div>
-            <span className="text-xs font-bold text-light-primary uppercase tracking-widest">
-              {project.category}
-            </span>
-          </div>
-        </div>
-
-        <div className="absolute top-4 right-4">
-          <span className="text-xs font-semibold text-light-muted bg-dark-primary/60 backdrop-blur-md px-3 py-1.5 rounded-full">
-            {project.year}
-          </span>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-light-primary mb-2 tracking-tight">
-            {project.clientName}
-          </h3>
-          {project.projectTitle && (
-            <p className="text-sm text-light-muted font-medium mb-3">{project.projectTitle}</p>
-          )}
-          <Link
-            href={`/portfolio/${project.slug}`}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-cyan hover:text-brand-purple transition-colors min-h-[48px] focus:outline-none focus:ring-2 focus:ring-brand-cyan/50 rounded-full"
-            aria-label={`View case study for ${project.clientName}`}
-          >
-            <span>View Project</span>
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  </motion.div>
-);
-
 const containerVariants = {
   hidden: {},
   visible: {
@@ -154,6 +80,542 @@ const itemVariants = {
     y: 0,
     transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
   },
+};
+
+type ProjectCardData = {
+  id: string;
+  slug: string;
+  clientName: string;
+  projectTitle?: string;
+  category: string;
+  description: string;
+  year: string;
+  thumbnail: string;
+};
+
+const getCardTransform = (index: number, total: number, isHovered: boolean) => {
+  if (total <= 1) return { x: 0, y: 0, rotate: 0, scale: 1, zIndex: 10, opacity: 1 };
+
+  const center = Math.floor(total / 2);
+  const offset = index - center;
+
+  if (total === 2) {
+    if (index === 0) {
+      return {
+        x: isHovered ? -70 : -50,
+        y: isHovered ? 20 : 15,
+        rotate: isHovered ? -3 : -2,
+        scale: isHovered ? 0.88 : 0.85,
+        zIndex: 5,
+        opacity: isHovered ? 0.7 : 0.55,
+      };
+    }
+    return {
+      x: 0,
+      y: 0,
+      rotate: 0,
+      scale: 1,
+      zIndex: 10,
+      opacity: 1,
+    };
+  }
+
+  if (total === 3) {
+    if (index === 0) {
+      return {
+        x: isHovered ? -90 : -70,
+        y: isHovered ? 35 : 25,
+        rotate: isHovered ? -4 : -3,
+        scale: isHovered ? 0.82 : 0.78,
+        zIndex: 3,
+        opacity: isHovered ? 0.65 : 0.5,
+      };
+    }
+    if (index === 1) {
+      return {
+        x: 0,
+        y: 0,
+        rotate: 0,
+        scale: 1,
+        zIndex: 10,
+        opacity: 1,
+      };
+    }
+    return {
+      x: isHovered ? 90 : 70,
+      y: isHovered ? 35 : 25,
+      rotate: isHovered ? 4 : 3,
+      scale: isHovered ? 0.82 : 0.78,
+      zIndex: 3,
+      opacity: isHovered ? 0.65 : 0.5,
+    };
+  }
+
+  if (total >= 4) {
+    if (index === 0) {
+      return {
+        x: isHovered ? -110 : -90,
+        y: isHovered ? 45 : 35,
+        rotate: isHovered ? -5 : -4,
+        scale: isHovered ? 0.75 : 0.7,
+        zIndex: 2,
+        opacity: isHovered ? 0.6 : 0.4,
+      };
+    }
+    if (index === 1) {
+      return {
+        x: isHovered ? -35 : -25,
+        y: isHovered ? 20 : 15,
+        rotate: isHovered ? -2 : -1,
+        scale: isHovered ? 0.9 : 0.88,
+        zIndex: 5,
+        opacity: isHovered ? 0.75 : 0.6,
+      };
+    }
+    if (index === 2) {
+      return {
+        x: isHovered ? 35 : 25,
+        y: isHovered ? 20 : 15,
+        rotate: isHovered ? 2 : 1,
+        scale: isHovered ? 0.9 : 0.88,
+        zIndex: 5,
+        opacity: isHovered ? 0.75 : 0.6,
+      };
+    }
+    return {
+      x: isHovered ? 110 : 90,
+      y: isHovered ? 45 : 35,
+      rotate: isHovered ? 5 : 4,
+      scale: isHovered ? 0.75 : 0.7,
+      zIndex: 2,
+      opacity: isHovered ? 0.6 : 0.4,
+    };
+  }
+
+  return { x: 0, y: 0, rotate: 0, scale: 1, zIndex: 10, opacity: 1 };
+};
+
+const getProjectCardData = (project: any): ProjectCardData => ({
+  id: project.id,
+  slug: project.slug,
+  clientName: project.clientName,
+  projectTitle: project.projectTitle,
+  category: project.category,
+  description: project.description || '',
+  year: project.year,
+  thumbnail: project.thumbnail,
+});
+
+const ProjectCard = ({
+  project,
+  index,
+  total,
+  isHovered,
+  animationDelay,
+}: {
+  project: ProjectCardData;
+  index: number;
+  total: number;
+  isHovered: boolean;
+  animationDelay: number;
+}) => {
+  const transform = getCardTransform(index, total, isHovered);
+
+  return (
+    <motion.div
+      className="absolute inset-0"
+      initial={{ opacity: 0, scale: 0.9, y: 20 }}
+      animate={{
+        opacity: transform.opacity,
+        scale: transform.scale,
+        x: transform.x,
+        y: transform.y,
+        rotate: transform.rotate,
+        zIndex: transform.zIndex,
+      }}
+      transition={{
+        type: 'spring',
+        stiffness: 260,
+        damping: 20,
+        mass: 0.8,
+        delay: animationDelay,
+      }}
+      style={{ zIndex: transform.zIndex }}
+    >
+      <Link
+        href={`/portfolio/${project.slug}`}
+        className="group relative block h-full w-full rounded-3xl overflow-hidden"
+        style={{
+          transformStyle: 'preserve-3d',
+          perspective: '1000px',
+        }}
+      >
+        <div
+          className="relative w-full h-full rounded-3xl overflow-hidden"
+          style={{
+            background: 'linear-gradient(180deg, rgba(19, 28, 49, 0.92) 0%, rgba(15, 23, 42, 0.96) 100%)',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            boxShadow: index === Math.floor(total / 2)
+              ? '0 40px 100px -25px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255,255,255,0.08) inset, 0 0 80px -20px rgba(0, 198, 255, 0.2)'
+              : '0 25px 60px -20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.06) inset',
+            transform: 'translateZ(0)',
+            willChange: 'transform',
+          }}
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src={project.thumbnail}
+              alt={`${project.clientName} - ${project.category} project`}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              priority={index === Math.floor(total / 2)}
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-primary/95 via-dark-primary/40 to-transparent" />
+
+            {index === Math.floor(total / 2) && (
+              <>
+                <div className="absolute top-4 left-4">
+                  <div className="flex items-center space-x-2.5">
+                    <div
+                      className="w-9 h-9 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                      style={{
+                        background: 'linear-gradient(135deg, #00C6FF 0%, #8B5CF6 100%)',
+                        boxShadow:
+                          '0 0 20px rgba(0, 198, 255, 0.3), 0 0 0 1px rgba(255,255,255,0.1) inset',
+                      }}
+                    >
+                      <Palette className="h-4 w-4 text-white" aria-hidden="true" />
+                    </div>
+                    <span className="text-xs font-bold text-light-primary uppercase tracking-widest">
+                      {project.category}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="absolute top-4 right-4">
+                  <span className="text-xs font-semibold text-light-muted bg-dark-primary/60 backdrop-blur-md px-3 py-1.5 rounded-full">
+                    {project.year}
+                  </span>
+                </div>
+              </>
+            )}
+
+            <div className={`absolute ${index === Math.floor(total / 2) ? 'bottom-0 left-0 right-0' : 'bottom-0 left-0 right-0 bg-gradient-to-t from-dark-primary/90 to-transparent'}`}>
+              <div className={`${index === Math.floor(total / 2) ? 'p-6 sm:p-8' : 'p-4 sm:p-5'}`}>
+                <h3 className={`${index === Math.floor(total / 2) ? 'text-2xl sm:text-3xl' : 'text-base sm:text-lg'} font-extrabold text-light-primary mb-1 tracking-tight`}>
+                  {project.clientName}
+                </h3>
+                {project.projectTitle && index === Math.floor(total / 2) && (
+                  <p className="text-sm text-light-muted font-medium mb-2">{project.projectTitle}</p>
+                )}
+                {index === Math.floor(total / 2) ? (
+                  <div className="flex items-center text-sm font-semibold text-brand-cyan group-hover:text-brand-purple transition-colors min-h-[48px]">
+                    <span>View Project</span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 ml-1" aria-hidden="true" />
+                  </div>
+                ) : (
+                  <div className="flex items-center text-xs font-medium text-brand-cyan opacity-70">
+                    <span>View Project</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {index === Math.floor(total / 2) && (
+              <div
+                className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{
+                  background: 'radial-gradient(circle at 50% 120%, rgba(0,198,255,0.1) 0%, transparent 60%)',
+                }}
+              />
+            )}
+          </div>
+        </div>
+      </Link>
+    </motion.div>
+  );
+};
+
+const FloatingCardShowcase = ({ projects, isMobile }: { projects: ProjectCardData[]; isMobile: boolean }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 });
+  const containerRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const displayProjects = useMemo(() => {
+    if (!isMobile) {
+      if (projects.length <= 1) return projects;
+      const center = Math.floor(projects.length / 2);
+      const start = Math.max(0, center - 2);
+      const end = Math.min(projects.length, start + 4);
+      return projects.slice(start, end);
+    }
+    return projects.slice(0, 3);
+  }, [projects, isMobile]);
+
+  useEffect(() => {
+    if (isMobile || !containerRef.current) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = (e.clientY - rect.top) / rect.height;
+      setMousePos({
+        x: Math.max(0, Math.min(1, x)),
+        y: Math.max(0, Math.min(1, y)),
+      });
+    };
+
+    const container = containerRef.current;
+    container.addEventListener('mousemove', handleMouseMove, { passive: true });
+    return () => container.removeEventListener('mousemove', handleMouseMove);
+  }, [isMobile]);
+
+  const parallaxX = prefersReducedMotion ? 0 : (mousePos.x - 0.5) * 20;
+  const parallaxY = prefersReducedMotion ? 0 : (mousePos.y - 0.5) * 15;
+
+  const floatingAnimations = useMemo(() => {
+    if (prefersReducedMotion) {
+      return displayProjects.map(() => ({ y: 0, x: 0, rotate: 0 }));
+    }
+    return displayProjects.map((_, i) => ({
+      y: [0, -8 - Math.random() * 8, 0, 8 + Math.random() * 6, 0],
+      x: [0, -3 + Math.random() * 6, 0],
+      rotate: [0, -1 + Math.random() * 2, 0, 1 - Math.random() * 2, 0],
+      transition: {
+        duration: 8 + Math.random() * 7,
+        repeat: Infinity,
+        ease: 'easeInOut',
+        delay: i * 0.5,
+      },
+    }));
+  }, [displayProjects.length, prefersReducedMotion]);
+
+  if (isMobile) {
+    return (
+      <div className="relative w-full" style={{ touchAction: 'pan-y' }}>
+        <div
+          className="relative w-full overflow-hidden"
+          style={{
+            height: 'clamp(280px, 50svh, 420px)',
+          }}
+        >
+          <MobileSwipeCarousel projects={displayProjects} />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative w-full h-full"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => {
+        setIsHovered(false);
+        setMousePos({ x: 0.5, y: 0.5 });
+      }}
+      style={{
+        perspective: '1200px',
+        transformStyle: 'preserve-3d',
+      }}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        animate={{
+          x: parallaxX,
+          y: parallaxY,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 150,
+          damping: 20,
+          mass: 0.5,
+        }}
+        style={{ transformStyle: 'preserve-3d' }}
+      >
+        {displayProjects.map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            index={index}
+            total={displayProjects.length}
+            isHovered={isHovered}
+            animationDelay={index * 0.1}
+          />
+        ))}
+      </motion.div>
+    </div>
+  );
+};
+
+const MobileSwipeCarousel = ({ projects }: { projects: ProjectCardData[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  useEffect(() => {
+    if (projects.length <= 1 || prefersReducedMotion) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % projects.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [projects.length, prefersReducedMotion]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+
+    if (Math.abs(distance) > minSwipeDistance) {
+      if (distance > 0) {
+        setCurrentIndex((prev) => (prev + 1) % projects.length);
+      } else {
+        setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
+      }
+    }
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
+
+  const getCardTransform = (index: number, total: number) => {
+    if (total <= 1) return { x: 0, scale: 1, opacity: 1, zIndex: 10 };
+    const offset = index - currentIndex;
+    if (offset === 0) return { x: 0, scale: 1, opacity: 1, zIndex: 10 };
+    if (Math.abs(offset) === 1) return { x: offset * -15, scale: 0.95, opacity: 0.6, zIndex: 5 };
+    return { x: offset * -25, scale: 0.9, opacity: 0, zIndex: 1 };
+  };
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative w-full h-full"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      {projects.map((project, index) => {
+        const transform = getCardTransform(index, projects.length);
+        return (
+          <motion.div
+            key={project.id}
+            className="absolute inset-0"
+            animate={{
+              x: transform.x,
+              scale: transform.scale,
+              opacity: transform.opacity,
+              zIndex: transform.zIndex,
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 300,
+              damping: 30,
+            }}
+          >
+            <Link
+              href={`/portfolio/${project.slug}`}
+              className="block h-full w-full"
+            >
+              <div
+                className="relative w-full h-full rounded-3xl overflow-hidden"
+                style={{
+                  background: 'linear-gradient(180deg, rgba(19, 28, 49, 0.92) 0%, rgba(15, 23, 42, 0.96) 100%)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  boxShadow: '0 30px 60px -20px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 60px -20px rgba(0, 198, 255, 0.2)',
+                }}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={project.thumbnail}
+                    alt={`${project.clientName} - ${project.category} project`}
+                    fill
+                    sizes="100vw"
+                    className="object-cover"
+                    priority={index === 0}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-primary/95 via-dark-primary/50 to-transparent" />
+
+                  <div className="absolute top-4 left-4">
+                    <div className="flex items-center space-x-2.5">
+                      <div
+                        className="w-8 h-8 rounded-lg flex items-center justify-center"
+                        style={{
+                          background: 'linear-gradient(135deg, #00C6FF 0%, #8B5CF6 100%)',
+                          boxShadow: '0 0 15px rgba(0, 198, 255, 0.3)',
+                        }}
+                      >
+                        <Palette className="h-4 w-4 text-white" aria-hidden="true" />
+                      </div>
+                      <span className="text-xs font-bold text-light-primary uppercase tracking-widest">
+                        {project.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="absolute top-4 right-4">
+                    <span className="text-xs font-semibold text-light-muted bg-dark-primary/60 backdrop-blur-md px-3 py-1.5 rounded-full">
+                      {project.year}
+                    </span>
+                  </div>
+
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                    <h3 className="text-lg sm:text-xl font-extrabold text-light-primary mb-1 tracking-tight">
+                      {project.clientName}
+                    </h3>
+                    {project.projectTitle && (
+                      <p className="text-xs sm:text-sm text-light-muted font-medium mb-2">{project.projectTitle}</p>
+                    )}
+                    <div className="flex items-center text-sm font-semibold text-brand-cyan min-h-[44px]">
+                      <span>View Project</span>
+                      <ArrowRight className="h-4 w-4 ml-1" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        );
+      })}
+
+      {projects.length > 1 && (
+        <div
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20"
+          role="tablist"
+          aria-label="Featured projects carousel"
+        >
+          {projects.map((_, i: number) => (
+            <button
+              key={i}
+              onClick={() => setCurrentIndex(i)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-cyan/50 min-h-[44px] min-w-[44px] flex items-center justify-center ${
+                i === currentIndex ? 'bg-brand-cyan w-6' : 'bg-white/30 hover:bg-white/50'
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+              aria-selected={i === currentIndex}
+              role="tab"
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 };
 
 const HeroSection = () => {
@@ -184,7 +646,7 @@ const HeroSection = () => {
       const cat = p.category || 'Other';
       if (!categories[cat]) categories[cat] = p;
     }
-    return Object.values(categories).slice(0, 6);
+    return Object.values(categories).slice(0, 6).map(getProjectCardData);
   }, []);
 
   useEffect(() => {
@@ -206,10 +668,6 @@ const HeroSection = () => {
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
-  const prefersReducedMotion =
-    typeof window !== 'undefined' &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   return (
     <section
@@ -416,54 +874,15 @@ const HeroSection = () => {
             className="lg:col-span-7 2xl:col-span-7 relative"
             style={{ marginTop: isMobile ? 'clamp(2rem, 6vw, 3.5rem)' : '0' }}
           >
-            <motion.div
+            <div
               className="relative w-full mx-auto"
               style={{
                 height: 'clamp(320px, 56svh, 560px)',
                 maxWidth: 'clamp(320px, 38vw, 520px)',
               }}
             >
-              <motion.div
-                className="relative h-full rounded-3xl overflow-hidden"
-                style={{
-                  boxShadow:
-                    '0 40px 100px -25px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255,255,255,0.08) inset, 0 0 80px -20px rgba(0, 198, 255, 0.2)',
-                  willChange: 'transform',
-                }}
-              >
-                <motion.div
-                  key={carouselIndex}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.05 }}
-                  transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                  className="absolute inset-0"
-                >
-                  <FeaturedProjectCard project={featuredProjects[carouselIndex]} index={carouselIndex} />
-                </motion.div>
-
-                {featuredProjects.length > 1 && (
-                  <div
-                    className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2"
-                    role="tablist"
-                    aria-label="Featured projects carousel"
-                  >
-                    {featuredProjects.map((_: any, i: number) => (
-                      <button
-                        key={i}
-                        onClick={() => setCarouselIndex(i)}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-cyan/50 ${
-                          i === carouselIndex ? 'bg-brand-cyan w-6' : 'bg-white/30 hover:bg-white/50'
-                        }`}
-                        aria-label={`Go to slide ${i + 1}`}
-                        aria-selected={i === carouselIndex}
-                        role="tab"
-                      />
-                    ))}
-                  </div>
-                )}
-              </motion.div>
-            </motion.div>
+              <FloatingCardShowcase projects={featuredProjects} isMobile={isMobile} />
+            </div>
           </motion.div>
         </div>
       </motion.div>

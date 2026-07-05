@@ -622,6 +622,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.ml-1 {
+  margin-left: .25rem;
+}
+
 .ml-1\.5 {
   margin-left: .375rem;
 }
@@ -1455,6 +1459,12 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-dark-primary\/90 {
+  --tw-gradient-from: #070b14e6 var(--tw-gradient-from-position);
+  --tw-gradient-to: #070b1400 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-dark-primary\/95 {
   --tw-gradient-from: #070b14f2 var(--tw-gradient-from-position);
   --tw-gradient-to: #070b1400 var(--tw-gradient-to-position);
@@ -1533,6 +1543,11 @@ body {
 .via-dark-primary\/40 {
   --tw-gradient-to: #070b1400  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #070b1466 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-dark-primary\/50 {
+  --tw-gradient-to: #070b1400  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #070b1480 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .via-transparent {
@@ -1970,6 +1985,10 @@ body {
 
 .opacity-60 {
   opacity: .6;
+}
+
+.opacity-70 {
+  opacity: .7;
 }
 
 .opacity-75 {
@@ -2676,6 +2695,11 @@ body {
   color: rgb(0 198 255 / var(--tw-text-opacity, 1));
 }
 
+.group:hover .group-hover\:text-brand-purple {
+  --tw-text-opacity: 1;
+  color: rgb(139 92 246 / var(--tw-text-opacity, 1));
+}
+
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
@@ -2976,6 +3000,10 @@ body {
 
   .sm\:p-4 {
     padding: 1rem;
+  }
+
+  .sm\:p-5 {
+    padding: 1.25rem;
   }
 
   .sm\:p-6 {
