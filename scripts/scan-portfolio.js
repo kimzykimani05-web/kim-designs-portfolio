@@ -8,16 +8,26 @@ const DATA_DIR = path.join(__dirname, '..', 'app', 'data');
 const MEDIA_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.svg', '.mp4', '.mov']);
 const IGNORE_DIRS = new Set(['.kilo', 'node_modules', '.git', '.next', 'scripts', 'public', 'app', 'components', 'sections', 'Websites']);
 
+const LOOSE_DUMP_DIRS = new Set(['Branding']);
+
 const NESTED_PROJECTS = [
   'Websites/Nairobi Merchants',
   'Websites/MT Kenya Gatepark Hotel',
   'Websites/Kim Design Portfolio',
+  'DBP',
+  'Dero',
+  'Kami',
+  'Karen',
 ];
 
 const slugOverrides = {
   'Websites/Nairobi Merchants': 'nairobi-merchants',
   'Websites/MT Kenya Gatepark Hotel': 'mt-kenya-gatepark-hotel',
   'Websites/Kim Design Portfolio': 'websites',
+  'DBP': 'dbp',
+  'Dero': 'dero',
+  'Kami': 'kami',
+  'Karen': 'karen',
 };
 
 const CATEGORY_KEYWORDS = {
@@ -243,6 +253,177 @@ const MANUAL_OVERRIDES = {
     outcome: 'Delivered a high-performance portfolio website with immersive animations and premium aesthetic.',
     liveUrl: 'https://kimdesigns.example.com',
   },
+  'dbp': {
+    category: 'Branding',
+    clientName: 'DBP',
+    description: 'Comprehensive brand identity project featuring logo design, motion graphics, and marketing collateral for Deepak Bajaj Properties.',
+    tags: ['Branding', 'Logo Design', 'Motion Graphics', 'Marketing'],
+    featured: true,
+    thumbnail: '/portfolio/dbp/Deepak-Bajaj-logo-4.png',
+    heroImage: '/portfolio/dbp/Deepak-Bajaj-logo-4.png',
+    deliverables: [
+      'Logo Design',
+      'Brand Guidelines',
+      'Motion Graphics',
+      'Marketing Collateral',
+      'Digital Banners',
+      'Print Materials'
+    ],
+    process: [
+      'Discovery & Research',
+      'Brand Strategy',
+      'Logo Design',
+      'Motion Concepts',
+      'Marketing Asset Creation',
+      'Final Delivery'
+    ],
+    outcome: 'Established a strong brand identity that unified the client\'s visual presence across digital and print media.',
+    caseStudy: {
+      overview: 'DBP (Deepak Bajaj Properties) required a comprehensive brand identity overhaul spanning logo design, motion graphics, and marketing collateral. The project delivered a cohesive visual system that works across web, social, and print.',
+      clientObjective: 'Create a premium, trustworthy brand identity for a real estate company that conveys professionalism, luxury, and reliability.',
+      myRole: 'Lead Brand Designer responsible for logo design, visual identity system, motion graphics, and full marketing collateral suite.',
+      designChallenges: 'Balancing luxury aesthetics with approachability, ensuring brand consistency across motion and static assets, and designing for both digital banners and print formats.',
+      researchStrategy: 'Analyzed competitor real estate brands, studied luxury property marketing trends, and developed mood boards exploring premium typography and color palettes.',
+      designProcess: 'Started with logo sketches and typography exploration, refined through client feedback, then expanded into motion concepts and marketing collateral layouts.',
+      keyFeatures: [
+        'Premium logo mark with luxury typography',
+        'Animated logo reveal for digital platforms',
+        'Comprehensive marketing collateral suite',
+        'Social media banner templates',
+        'Print-ready real estate flyers'
+      ],
+      technologies: [
+        'Adobe Illustrator',
+        'Adobe After Effects',
+        'Adobe Photoshop',
+        'Figma'
+      ],
+      finalOutcome: 'The brand identity was successfully launched across all client touchpoints, receiving positive feedback for its premium aesthetic and versatility.',
+      businessImpact: 'Client reported increased brand recognition and higher engagement on marketing materials post-launch.',
+      lessonsLearned: 'Creating a brand system that spans both motion and static media requires early alignment on animation principles and consistent visual language.'
+    }
+  },
+  'dero': {
+    category: 'Branding',
+    clientName: 'Dero',
+    description: 'Clean and modern brand identity design with a focus on minimalist aesthetics and strong visual impact.',
+    tags: ['Branding', 'Logo Design', 'Visual Identity'],
+    featured: false,
+    thumbnail: '/portfolio/dero/WhatsApp Image 2025-06-08 at 7.11.43 PM (2).jpeg',
+    heroImage: '/portfolio/dero/WhatsApp Image 2025-06-08 at 7.11.43 PM (2).jpeg',
+    deliverables: [
+      'Logo Design',
+      'Brand Guidelines',
+      'Visual Identity',
+      'Stationery'
+    ],
+    process: [
+      'Discovery & Research',
+      'Concept Development',
+      'Design Execution',
+      'Client Feedback',
+      'Final Delivery'
+    ],
+    outcome: 'Delivered a distinctive brand identity that positioned the client for market growth.',
+    caseStudy: {
+      overview: 'Dero required a fresh brand identity that communicates innovation and reliability. The project focused on creating a clean, modern visual language.',
+      clientObjective: 'Develop a brand identity that stands out in a competitive market while remaining timeless and versatile.',
+      myRole: 'Brand Designer responsible for end-to-end visual identity development including logo, color palette, and brand applications.',
+      designChallenges: 'Creating a mark that is both distinctive and scalable across different media sizes.',
+      researchStrategy: 'Conducted competitive analysis and explored minimalist design trends to inform the visual direction.',
+      designProcess: 'Explored multiple logo directions, refined the strongest concept, and developed supporting brand assets.',
+      keyFeatures: [
+        'Minimalist logo mark',
+        'Versatile color system',
+        'Clean typography pairing',
+        'Scalable brand assets'
+      ],
+      technologies: ['Adobe Illustrator', 'Figma'],
+      finalOutcome: 'The brand identity was well-received and successfully implemented across all client touchpoints.',
+      lessonsLearned: 'Simplicity in brand design requires rigorous refinement to ensure every element serves a purpose.'
+    }
+  },
+  'kami': {
+    category: 'Marketing Campaigns',
+    clientName: 'Kami',
+    description: 'Eye-catching poster design created for maximum visual impact and audience engagement.',
+    tags: ['Marketing Campaigns', 'Posters', 'Graphic Design', 'Visual Design'],
+    featured: false,
+    thumbnail: '/portfolio/kami/kami.jpg',
+    heroImage: '/portfolio/kami/kami.jpg',
+    subcategory: 'Posters',
+    deliverables: [
+      'Poster Design',
+      'Print Ready Files',
+      'Digital Assets',
+      'Campaign Visuals'
+    ],
+    process: [
+      'Discovery & Research',
+      'Concept Development',
+      'Design Execution',
+      'Client Feedback',
+      'Final Delivery'
+    ],
+    outcome: 'Delivered a high-impact poster campaign that effectively communicated the brand message.',
+    caseStudy: {
+      overview: 'Kami poster project focused on creating a bold, attention-grabbing visual design for marketing purposes.',
+      clientObjective: 'Design a poster that captures attention and communicates the campaign message instantly.',
+      myRole: 'Graphic Designer responsible for poster concept, layout, and final production files.',
+      designChallenges: 'Creating a design that is visually striking while maintaining clarity of message.',
+      researchStrategy: 'Studied contemporary poster design trends and color psychology to maximize visual impact.',
+      designProcess: 'Developed multiple layout concepts, refined the strongest direction, and prepared print-ready files.',
+      keyFeatures: [
+        'Bold typography hierarchy',
+        'Strategic color usage',
+        'High-contrast visual elements',
+        'Print-optimized resolution'
+      ],
+      technologies: ['Adobe Photoshop', 'Adobe Illustrator', 'Figma'],
+      finalOutcome: 'The poster design successfully captured audience attention and met all campaign objectives.',
+      lessonsLearned: 'Great poster design balances artistic expression with functional communication.'
+    }
+  },
+  'karen': {
+    category: 'Branding',
+    clientName: 'Karen',
+    description: 'Sophisticated brand identity combining logo design with supporting marketing materials for a premium brand experience.',
+    tags: ['Branding', 'Logo Design', 'Poster Design', 'Visual Identity'],
+    featured: false,
+    thumbnail: '/portfolio/karen/elav-stretch-shadow.png',
+    heroImage: '/portfolio/karen/elav-stretch-shadow.png',
+    deliverables: [
+      'Logo Design',
+      'Brand Guidelines',
+      'Visual Identity',
+      'Marketing Materials'
+    ],
+    process: [
+      'Discovery & Research',
+      'Concept Development',
+      'Design Execution',
+      'Client Feedback',
+      'Final Delivery'
+    ],
+    outcome: 'Created a cohesive brand identity that elevated the client\'s market presence.',
+    caseStudy: {
+      overview: 'Karen brand project delivered a complete visual identity including logo design and supporting marketing collateral.',
+      clientObjective: 'Build a premium brand identity that reflects the quality and sophistication of the client\'s offerings.',
+      myRole: 'Brand Designer responsible for logo creation, visual identity system, and marketing material design.',
+      designChallenges: 'Creating a brand that feels premium yet accessible, with assets that work across both digital and print.',
+      researchStrategy: 'Explored luxury brand aesthetics and contemporary design trends to inform the creative direction.',
+      designProcess: 'Designed logo concepts, refined the chosen direction, and developed supporting brand and marketing materials.',
+      keyFeatures: [
+        'Elegant logo design',
+        'Sophisticated color palette',
+        'Marketing poster design',
+        'Cohesive brand system'
+      ],
+      technologies: ['Adobe Illustrator', 'Adobe Photoshop', 'Figma'],
+      finalOutcome: 'The brand identity successfully positioned the client as a premium offering in their market.',
+      lessonsLearned: 'A strong brand identity requires consistency across every touchpoint, from logo to marketing materials.'
+    }
+  },
 };
 
 function determineSubcategory(folderName, category) {
@@ -331,6 +512,7 @@ function scanMedia() {
     const full = path.join(MEDIA_DIR, f);
     if (!fs.statSync(full).isDirectory()) return false;
     if (IGNORE_DIRS.has(f)) return false;
+    if (LOOSE_DUMP_DIRS.has(f)) return false;
     return true;
   });
 
@@ -361,7 +543,7 @@ function scanMedia() {
 
     const override = MANUAL_OVERRIDES[slug];
     const category = override ? override.category : determineCategory(folder, files);
-    const subcategory = override ? undefined : determineSubcategory(folder, category);
+    const subcategory = override && override.subcategory ? override.subcategory : determineSubcategory(folder, category);
     const description = override ? override.description : generateDescription(folder, category, files);
     const tags = override ? override.tags : [category, ...(subcategory ? [subcategory] : [])];
     const featured = override ? override.featured : projects.length < 6;
@@ -391,7 +573,20 @@ function scanMedia() {
       caseStudy: override ? override.caseStudy : undefined,
     };
 
-    projects.push(project);
+    const existingIndex = projects.findIndex(p => p.slug === slug);
+    if (existingIndex >= 0) {
+      const existing = projects[existingIndex];
+      const mergedMedia = [...existing.media];
+      project.media.forEach((m) => {
+        if (!mergedMedia.some((em) => em.path === m.path)) {
+          mergedMedia.push(m);
+        }
+      });
+      project.media = mergedMedia;
+      projects[existingIndex] = { ...existing, ...project };
+    } else {
+      projects.push(project);
+    }
 
     const destDir = path.join(PUBLIC_DIR, slug);
     fs.mkdirSync(destDir, { recursive: true });
@@ -406,18 +601,19 @@ function scanMedia() {
 
   const categories = [
     { id: 'all', label: 'All Work' },
-    { id: 'Branding', label: 'Branding' },
-    { id: 'Website Design', label: 'Websites' },
+    { id: 'Branding', label: 'Brand Identity' },
+    { id: 'Marketing Campaigns', label: 'Posters' },
     { id: 'Motion Graphics', label: 'Motion Graphics' },
-    { id: 'Marketing Campaigns', label: 'Campaigns' },
-    { id: 'Print Design', label: 'Print' },
-    { id: 'Social Media', label: 'Social Media' },
+    { id: 'Website Design', label: 'Websites' },
   ];
 
   const output = { projects, categories, generatedAt: new Date().toISOString() };
 
   fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(path.join(DATA_DIR, 'portfolio.json'), JSON.stringify(output, null, 2));
+  const outputPath = path.join(DATA_DIR, 'portfolio.json');
+  const fd = fs.openSync(outputPath, 'w');
+  fs.writeSync(fd, JSON.stringify(output, null, 2));
+  fs.closeSync(fd);
   console.log('Generated portfolio data:', projects.length, 'projects');
 }
 

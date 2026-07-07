@@ -7,12 +7,11 @@ import { useState, useMemo } from 'react';
 import { SectionHeader } from '../../components/SectionHeader';
 import PortfolioFilter from '../../components/PortfolioFilter';
 import PortfolioGrid from '../../components/PortfolioGrid';
+import { FilterCategory } from '../../components/PortfolioFilter';
 import portfolioData from '../data/portfolio.json';
 
-type CategoryId = 'all' | 'Branding' | 'Website Design' | 'Motion Graphics' | 'Marketing Campaigns' | 'Print Design' | 'Social Media' | 'Other';
-
 export default function PortfolioPage() {
-  const [activeCategory, setActiveCategory] = useState<CategoryId>('all');
+  const [activeCategory, setActiveCategory] = useState<FilterCategory>('all');
   const [activeSubcategory, setActiveSubcategory] = useState('');
 
   const allProjects = useMemo(() => portfolioData.projects, []);
@@ -33,7 +32,7 @@ export default function PortfolioPage() {
               All <span className="gradient-text">Projects</span>
             </>
           }
-          subheading="Explore my complete collection of branding, web design, motion graphics, and marketing projects."
+          subheading="Explore my complete collection of brand identity, poster design, motion graphics, and web projects."
         />
 
         <PortfolioFilter

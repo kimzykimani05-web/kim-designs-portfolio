@@ -73,8 +73,12 @@ const Header = () => {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24" style={{ maxWidth: 'min(100%, 1200px)' }}>
-          <Link href="/" className="flex items-center group" aria-label="Kim Designs - Home">
-            <div className="relative h-9 w-9 sm:h-11 sm:w-11 lg:h-12 lg:w-12 rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+          <Link
+            href="/"
+            className="group flex items-center rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-primary"
+            aria-label="Kim Designs - Home"
+          >
+            <div className="relative h-9 w-9 shrink-0 sm:h-11 sm:w-11 lg:h-12 lg:w-12 rounded-xl overflow-hidden shadow-lg shadow-black/25 ring-1 ring-white/10 transition-all duration-300 group-hover:scale-[1.04] group-hover:ring-brand-cyan/40 group-hover:shadow-[0_0_28px_-6px_rgba(0,198,255,0.55)]">
               <Image
                 src="/my-logo.png"
                 alt="Kim Designs Logo"
@@ -83,6 +87,14 @@ const Header = () => {
                 className="object-cover"
               />
             </div>
+            <span className="ml-2.5 flex items-center sm:ml-3">
+              <span className="font-heading text-[1.05rem] font-bold leading-none tracking-tight text-light-primary transition-opacity duration-300 group-hover:opacity-90 sm:text-lg lg:text-xl">
+                Kim
+              </span>
+              <span className="ml-1.5 bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-purple bg-clip-text font-heading text-[1.05rem] font-semibold leading-none tracking-tight text-transparent transition-opacity duration-300 group-hover:opacity-90 sm:text-lg lg:text-xl">
+                Designs
+              </span>
+            </span>
           </Link>
 
           <nav className="hidden lg:flex items-center" role="navigation" aria-label="Main navigation">

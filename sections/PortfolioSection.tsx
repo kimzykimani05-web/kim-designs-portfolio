@@ -7,19 +7,44 @@ import { useState, useMemo } from 'react';
 import { SectionHeader } from '../components/SectionHeader';
 import PortfolioFilter from '../components/PortfolioFilter';
 import PortfolioGrid from '../components/PortfolioGrid';
+import { FilterCategory } from '../components/PortfolioFilter';
 
 import portfolioData from '../app/data/portfolio.json';
 
-type CategoryId = 'all' | 'Branding' | 'Website Design' | 'Motion Graphics' | 'Marketing Campaigns' | 'Print Design' | 'Social Media' | 'Other';
+function getDisplayCategory(project: any): string {
+  if (project.category === 'Branding') return 'Brand Identity';
+  if (project.category === 'Marketing Campaigns' && project.subcategory === 'Posters') return 'Posters';
+  if (project.category === 'Motion Graphics') return 'Motion Graphics';
+  if (project.category === 'Website Design') return 'Websites';
+  return 'Other';
+}
+
+const CATEGORY_LABELS: Record<string, string> = {
+  'Brand Identity': 'Brand Identity',
+  'Posters': 'Poster Design',
+  'Motion Graphics': 'Motion Graphics',
+  'Websites': 'Website Design',
+};
 
 export default function PortfolioSection() {
-   const [activeCategory, setActiveCategory] = useState<CategoryId>('all');
+   const [activeCategory, setActiveCategory] = useState<FilterCategory>('all');
    const [activeSubcategory, setActiveSubcategory] = useState('');
 
    const featuredProjects = useMemo(
      () => portfolioData.projects.filter((p: any) => p.featured),
      []
    );
+
+   const otherProjectsByCategory = useMemo(() => {
+     const nonFeatured = portfolioData.projects.filter((p: any) => !p.featured);
+     const groups: Record<string, any[]> = {};
+     nonFeatured.forEach((p) => {
+       const cat = getDisplayCategory(p);
+       if (!groups[cat]) groups[cat] = [];
+       groups[cat].push(p);
+     });
+     return groups;
+   }, []);
 
    return (
      <section id="portfolio" className="relative py-20 sm:py-24 lg:py-32 bg-dark-primary overflow-hidden">
@@ -36,7 +61,7 @@ export default function PortfolioSection() {
                Featured <span className="gradient-text-alt">Case Studies</span>
              </>
            }
-           subheading="Selected work demonstrating strategic thinking and creative excellence across various design disciplines."
+            subheading="A curated selection of brand identity, poster design, motion graphics, and web design projects."
          />
 
          <PortfolioFilter
@@ -51,6 +76,19 @@ export default function PortfolioSection() {
            activeCategory={activeCategory}
            activeSubcategory={activeSubcategory}
          />
+
+         {Object.entries(otherProjectsByCategory).map(([category, projects]) => (
+           <div key={category} className="mt-20 sm:mt-24">
+             <h3 className="text-2xl sm:text-3xl font-bold text-light-primary mb-8 text-center">
+               {CATEGORY_LABELS[category] || category}
+             </h3>
+             <PortfolioGrid
+               projects={projects}
+               activeCategory="all"
+               activeSubcategory=""
+             />
+           </div>
+         ))}
 
          {featuredProjects.length > 0 && (
            <motion.div
@@ -69,4 +107,4 @@ export default function PortfolioSection() {
        </div>
      </section>
    );
- }
+  }

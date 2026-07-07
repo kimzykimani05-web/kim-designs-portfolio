@@ -4,26 +4,22 @@ import { motion } from 'framer-motion';
 import { ChevronDown, X } from 'lucide-react';
 import { useState } from 'react';
 
-type CategoryId = 'all' | 'Branding' | 'Website Design' | 'Motion Graphics' | 'Marketing Campaigns' | 'Print Design' | 'Social Media' | 'Other';
+export type FilterCategory = 'all' | 'Brand Identity' | 'Posters' | 'Motion Graphics' | 'Websites';
 
 interface PortfolioFilterProps {
-  activeCategory: CategoryId;
-  onCategoryChange: (category: CategoryId) => void;
+  activeCategory: FilterCategory;
+  onCategoryChange: (category: FilterCategory) => void;
   activeSubcategory: string;
   onSubcategoryChange: (subcategory: string) => void;
 }
 
 const categories = [
-  { id: 'all', label: 'All' },
-  { id: 'Branding', label: 'Branding' },
-  { id: 'Website Design', label: 'Websites' },
+  { id: 'all', label: 'All Work' },
+  { id: 'Brand Identity', label: 'Brand Identity' },
+  { id: 'Posters', label: 'Posters' },
   { id: 'Motion Graphics', label: 'Motion Graphics' },
-  { id: 'Marketing Campaigns', label: 'Campaigns' },
-  { id: 'Print Design', label: 'Print' },
-  { id: 'Social Media', label: 'Social Media' },
+  { id: 'Websites', label: 'Websites' },
 ] as const;
-
-const marketingSubcategories = ['Posters', 'Flyers'];
 
 export default function PortfolioFilter({
   activeCategory,
@@ -31,22 +27,16 @@ export default function PortfolioFilter({
   activeSubcategory,
   onSubcategoryChange,
 }: PortfolioFilterProps) {
-  const [showSubMenu, setShowSubMenu] = useState(false);
-
-  const handleCategoryClick = (id: CategoryId) => {
+  const handleCategoryClick = (id: FilterCategory) => {
     onCategoryChange(id);
-    if (id === 'Marketing Campaigns') {
-      setShowSubMenu(!showSubMenu);
-    } else {
+    if (id !== 'Posters') {
       onSubcategoryChange('');
-      setShowSubMenu(false);
     }
   };
 
   const clearFilters = () => {
     onCategoryChange('all');
     onSubcategoryChange('');
-    setShowSubMenu(false);
   };
 
   return (
@@ -59,60 +49,17 @@ export default function PortfolioFilter({
     >
       <div className="flex flex-wrap justify-center gap-3">
         {categories.map((cat) => (
-          <div key={cat.id} className="relative">
-            <button
-              onClick={() => handleCategoryClick(cat.id)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === cat.id
-                  ? 'bg-gradient-to-r from-brand-cyan to-brand-purple text-white shadow-lg shadow-brand-blue/30'
-                  : 'bg-dark-card border border-white/10 text-light-muted hover:text-light-primary hover:border-brand-blue/50'
-              }`}
-            >
-              {cat.label}
-              {cat.id === 'Marketing Campaigns' && (
-                <ChevronDown className={`inline-block ml-1.5 h-3.5 w-3.5 transition-transform ${showSubMenu ? 'rotate-180' : ''}`} />
-              )}
-            </button>
-
-            {cat.id === 'Marketing Campaigns' && showSubMenu && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="absolute top-full mt-2 left-0 bg-dark-card border border-white/10 rounded-2xl p-2 shadow-xl z-20 min-w-[160px]"
-              >
-                {marketingSubcategories.map((sub) => (
-                  <button
-                    key={sub}
-                    onClick={() => {
-                      onSubcategoryChange(sub);
-                      setShowSubMenu(false);
-                    }}
-                    className={`w-full text-left px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
-                      activeSubcategory === sub
-                        ? 'bg-brand-cyan/20 text-brand-cyan'
-                        : 'text-light-muted hover:text-light-primary hover:bg-white/5'
-                    }`}
-                  >
-                    {sub}
-                    {activeSubcategory === sub && (
-                      <X className="inline-block ml-2 h-3 w-3" />
-                    )}
-                  </button>
-                ))}
-                {activeSubcategory && (
-                  <button
-                    onClick={() => {
-                      onSubcategoryChange('');
-                      setShowSubMenu(false);
-                    }}
-                    className="w-full text-left px-4 py-2 rounded-xl text-sm font-medium text-light-muted hover:text-light-primary hover:bg-white/5 transition-all duration-200"
-                  >
-                    Clear Filter
-                  </button>
-                )}
-              </motion.div>
-            )}
-          </div>
+          <button
+            key={cat.id}
+            onClick={() => handleCategoryClick(cat.id)}
+            className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              activeCategory === cat.id
+                ? 'bg-gradient-to-r from-brand-cyan to-brand-purple text-white shadow-lg shadow-brand-blue/30'
+                : 'bg-dark-card border border-white/10 text-light-muted hover:text-light-primary hover:border-brand-blue/50'
+            }`}
+          >
+            {cat.label}
+          </button>
         ))}
       </div>
 

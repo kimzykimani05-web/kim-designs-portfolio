@@ -89,6 +89,302 @@
       "outcome": "Created compelling motion content that boosted social media engagement and brand storytelling."
     },
     {
+      "id": "dbp",
+      "slug": "dbp",
+      "clientName": "DBP",
+      "category": "Branding",
+      "description": "Comprehensive brand identity project featuring logo design, motion graphics, and marketing collateral for Deepak Bajaj Properties.",
+      "tags": [
+        "Branding",
+        "Logo Design",
+        "Motion Graphics",
+        "Marketing"
+      ],
+      "year": "2024",
+      "featured": true,
+      "media": [
+        {
+          "path": "/portfolio/dbp/Deepak-Bajaj-logo-4.png",
+          "type": "image",
+          "ext": ".png"
+        },
+        {
+          "path": "/portfolio/dbp/Deepak-Bajaj-logo.jpgc.jpg",
+          "type": "image",
+          "ext": ".jpg"
+        },
+        {
+          "path": "/portfolio/dbp/Deepak motion 1.mp4",
+          "type": "video",
+          "ext": ".mp4"
+        },
+        {
+          "path": "/portfolio/dbp/Minimal_Build_Logo.mp4",
+          "type": "video",
+          "ext": ".mp4"
+        },
+        {
+          "path": "/portfolio/dbp/dp-poster-ig.jpg",
+          "type": "image",
+          "ext": ".jpg"
+        },
+        {
+          "path": "/portfolio/dbp/Real-Estate-Facebook-Cover-17.png",
+          "type": "image",
+          "ext": ".png"
+        },
+        {
+          "path": "/portfolio/dbp/Real-Estate-Web-Banner-1.jpg",
+          "type": "image",
+          "ext": ".jpg"
+        },
+        {
+          "path": "/portfolio/dbp/Real-Estate-Web-Banner-3.jpg",
+          "type": "image",
+          "ext": ".jpg"
+        },
+        {
+          "path": "/portfolio/dbp/real_estate_flyer_2.jpg",
+          "type": "image",
+          "ext": ".jpg"
+        }
+      ],
+      "thumbnail": "/portfolio/dbp/Deepak-Bajaj-logo-4.png",
+      "deliverables": [
+        "Logo Design",
+        "Brand Guidelines",
+        "Motion Graphics",
+        "Marketing Collateral",
+        "Digital Banners",
+        "Print Materials"
+      ],
+      "process": [
+        "Discovery & Research",
+        "Brand Strategy",
+        "Logo Design",
+        "Motion Concepts",
+        "Marketing Asset Creation",
+        "Final Delivery"
+      ],
+      "outcome": "Established a strong brand identity that unified the client's visual presence across digital and print media.",
+      "heroImage": "/portfolio/dbp/Deepak-Bajaj-logo-4.png",
+      "caseStudy": {
+        "overview": "DBP (Deepak Bajaj Properties) required a comprehensive brand identity overhaul spanning logo design, motion graphics, and marketing collateral. The project delivered a cohesive visual system that works across web, social, and print.",
+        "clientObjective": "Create a premium, trustworthy brand identity for a real estate company that conveys professionalism, luxury, and reliability.",
+        "myRole": "Lead Brand Designer responsible for logo design, visual identity system, motion graphics, and full marketing collateral suite.",
+        "designChallenges": "Balancing luxury aesthetics with approachability, ensuring brand consistency across motion and static assets, and designing for both digital banners and print formats.",
+        "researchStrategy": "Analyzed competitor real estate brands, studied luxury property marketing trends, and developed mood boards exploring premium typography and color palettes.",
+        "designProcess": "Started with logo sketches and typography exploration, refined through client feedback, then expanded into motion concepts and marketing collateral layouts.",
+        "keyFeatures": [
+          "Premium logo mark with luxury typography",
+          "Animated logo reveal for digital platforms",
+          "Comprehensive marketing collateral suite",
+          "Social media banner templates",
+          "Print-ready real estate flyers"
+        ],
+        "technologies": [
+          "Adobe Illustrator",
+          "Adobe After Effects",
+          "Adobe Photoshop",
+          "Figma"
+        ],
+        "finalOutcome": "The brand identity was successfully launched across all client touchpoints, receiving positive feedback for its premium aesthetic and versatility.",
+        "businessImpact": "Client reported increased brand recognition and higher engagement on marketing materials post-launch.",
+        "lessonsLearned": "Creating a brand system that spans both motion and static media requires early alignment on animation principles and consistent visual language."
+      }
+    },
+    {
+      "id": "dero",
+      "slug": "dero",
+      "clientName": "Dero",
+      "category": "Branding",
+      "description": "Clean and modern brand identity design with a focus on minimalist aesthetics and strong visual impact.",
+      "tags": [
+        "Branding",
+        "Logo Design",
+        "Visual Identity"
+      ],
+      "year": "2024",
+      "featured": false,
+      "media": [
+        {
+          "path": "/portfolio/dero/WhatsApp Image 2025-06-08 at 7.11.43 PM (2).jpeg",
+          "type": "image",
+          "ext": ".jpeg"
+        },
+        {
+          "path": "/portfolio/dero/WhatsApp Image 2025-06-08 at 7.11.44 PM.jpeg",
+          "type": "image",
+          "ext": ".jpeg"
+        }
+      ],
+      "thumbnail": "/portfolio/dero/WhatsApp Image 2025-06-08 at 7.11.43 PM (2).jpeg",
+      "deliverables": [
+        "Logo Design",
+        "Brand Guidelines",
+        "Visual Identity",
+        "Stationery"
+      ],
+      "process": [
+        "Discovery & Research",
+        "Concept Development",
+        "Design Execution",
+        "Client Feedback",
+        "Final Delivery"
+      ],
+      "outcome": "Delivered a distinctive brand identity that positioned the client for market growth.",
+      "heroImage": "/portfolio/dero/WhatsApp Image 2025-06-08 at 7.11.43 PM (2).jpeg",
+      "caseStudy": {
+        "overview": "Dero required a fresh brand identity that communicates innovation and reliability. The project focused on creating a clean, modern visual language.",
+        "clientObjective": "Develop a brand identity that stands out in a competitive market while remaining timeless and versatile.",
+        "myRole": "Brand Designer responsible for end-to-end visual identity development including logo, color palette, and brand applications.",
+        "designChallenges": "Creating a mark that is both distinctive and scalable across different media sizes.",
+        "researchStrategy": "Conducted competitive analysis and explored minimalist design trends to inform the visual direction.",
+        "designProcess": "Explored multiple logo directions, refined the strongest concept, and developed supporting brand assets.",
+        "keyFeatures": [
+          "Minimalist logo mark",
+          "Versatile color system",
+          "Clean typography pairing",
+          "Scalable brand assets"
+        ],
+        "technologies": [
+          "Adobe Illustrator",
+          "Figma"
+        ],
+        "finalOutcome": "The brand identity was well-received and successfully implemented across all client touchpoints.",
+        "lessonsLearned": "Simplicity in brand design requires rigorous refinement to ensure every element serves a purpose."
+      }
+    },
+    {
+      "id": "kami",
+      "slug": "kami",
+      "clientName": "Kami",
+      "category": "Marketing Campaigns",
+      "subcategory": "Posters",
+      "description": "Eye-catching poster design created for maximum visual impact and audience engagement.",
+      "tags": [
+        "Marketing Campaigns",
+        "Posters",
+        "Graphic Design",
+        "Visual Design"
+      ],
+      "year": "2024",
+      "featured": false,
+      "media": [
+        {
+          "path": "/portfolio/kami/kami.jpg",
+          "type": "image",
+          "ext": ".jpg"
+        }
+      ],
+      "thumbnail": "/portfolio/kami/kami.jpg",
+      "deliverables": [
+        "Poster Design",
+        "Print Ready Files",
+        "Digital Assets",
+        "Campaign Visuals"
+      ],
+      "process": [
+        "Discovery & Research",
+        "Concept Development",
+        "Design Execution",
+        "Client Feedback",
+        "Final Delivery"
+      ],
+      "outcome": "Delivered a high-impact poster campaign that effectively communicated the brand message.",
+      "heroImage": "/portfolio/kami/kami.jpg",
+      "caseStudy": {
+        "overview": "Kami poster project focused on creating a bold, attention-grabbing visual design for marketing purposes.",
+        "clientObjective": "Design a poster that captures attention and communicates the campaign message instantly.",
+        "myRole": "Graphic Designer responsible for poster concept, layout, and final production files.",
+        "designChallenges": "Creating a design that is visually striking while maintaining clarity of message.",
+        "researchStrategy": "Studied contemporary poster design trends and color psychology to maximize visual impact.",
+        "designProcess": "Developed multiple layout concepts, refined the strongest direction, and prepared print-ready files.",
+        "keyFeatures": [
+          "Bold typography hierarchy",
+          "Strategic color usage",
+          "High-contrast visual elements",
+          "Print-optimized resolution"
+        ],
+        "technologies": [
+          "Adobe Photoshop",
+          "Adobe Illustrator",
+          "Figma"
+        ],
+        "finalOutcome": "The poster design successfully captured audience attention and met all campaign objectives.",
+        "lessonsLearned": "Great poster design balances artistic expression with functional communication."
+      }
+    },
+    {
+      "id": "karen",
+      "slug": "karen",
+      "clientName": "Karen",
+      "category": "Branding",
+      "description": "Sophisticated brand identity combining logo design with supporting marketing materials for a premium brand experience.",
+      "tags": [
+        "Branding",
+        "Logo Design",
+        "Poster Design",
+        "Visual Identity"
+      ],
+      "year": "2024",
+      "featured": false,
+      "media": [
+        {
+          "path": "/portfolio/karen/elav-stretch-shadow.jpg",
+          "type": "image",
+          "ext": ".jpg"
+        },
+        {
+          "path": "/portfolio/karen/elav-stretch-shadow.png",
+          "type": "image",
+          "ext": ".png"
+        },
+        {
+          "path": "/portfolio/karen/WhatsApp Image 2025-02-12 at 3.48.04 PM.jpeg",
+          "type": "image",
+          "ext": ".jpeg"
+        }
+      ],
+      "thumbnail": "/portfolio/karen/elav-stretch-shadow.png",
+      "deliverables": [
+        "Logo Design",
+        "Brand Guidelines",
+        "Visual Identity",
+        "Marketing Materials"
+      ],
+      "process": [
+        "Discovery & Research",
+        "Concept Development",
+        "Design Execution",
+        "Client Feedback",
+        "Final Delivery"
+      ],
+      "outcome": "Created a cohesive brand identity that elevated the client's market presence.",
+      "heroImage": "/portfolio/karen/elav-stretch-shadow.png",
+      "caseStudy": {
+        "overview": "Karen brand project delivered a complete visual identity including logo design and supporting marketing collateral.",
+        "clientObjective": "Build a premium brand identity that reflects the quality and sophistication of the client's offerings.",
+        "myRole": "Brand Designer responsible for logo creation, visual identity system, and marketing material design.",
+        "designChallenges": "Creating a brand that feels premium yet accessible, with assets that work across both digital and print.",
+        "researchStrategy": "Explored luxury brand aesthetics and contemporary design trends to inform the creative direction.",
+        "designProcess": "Designed logo concepts, refined the chosen direction, and developed supporting brand and marketing materials.",
+        "keyFeatures": [
+          "Elegant logo design",
+          "Sophisticated color palette",
+          "Marketing poster design",
+          "Cohesive brand system"
+        ],
+        "technologies": [
+          "Adobe Illustrator",
+          "Adobe Photoshop",
+          "Figma"
+        ],
+        "finalOutcome": "The brand identity successfully positioned the client as a premium offering in their market.",
+        "lessonsLearned": "A strong brand identity requires consistency across every touchpoint, from logo to marketing materials."
+      }
+    },
+    {
       "id": "magita-j",
       "slug": "magita-j",
       "clientName": "Magita J",
@@ -147,7 +443,6 @@
       "slug": "mt-kenya-gatepark-hotel",
       "clientName": "MT Kenya Gatepark Hotel",
       "category": "Website Design",
-      "projectTitle": "Hotel Booking & Hospitality Website",
       "description": "A responsive hotel booking website delivering a seamless online reservation experience with immersive property showcases.",
       "tags": [
         "Hotel Website",
@@ -158,6 +453,11 @@
       "year": "2024",
       "featured": true,
       "media": [
+        {
+          "path": "/portfolio/mt-kenya-gatepark-hotel/MT-View-1.jpg",
+          "type": "image",
+          "ext": ".jpg"
+        },
         {
           "path": "/portfolio/mt-kenya-gatepark-hotel/Screenshot (60).png",
           "type": "image",
@@ -215,6 +515,21 @@
         }
       ],
       "thumbnail": "/portfolio/mt-kenya-gatepark-hotel/Screenshot (61).png",
+      "deliverables": [
+        "UI/UX Design",
+        "Responsive Development",
+        "Booking System Integration",
+        "CMS Integration"
+      ],
+      "process": [
+        "Discovery & Research",
+        "Concept Development",
+        "Design Execution",
+        "Client Feedback",
+        "Final Delivery"
+      ],
+      "outcome": "Delivered a responsive hotel website that improved online bookings and enhanced guest engagement.",
+      "projectTitle": "Hotel Booking & Hospitality Website",
       "heroImage": "/portfolio/mt-kenya-gatepark-hotel/Screenshot (61).png",
       "caseStudy": {
         "screenshotsOrder": [
@@ -267,179 +582,6 @@
             ]
           }
         ]
-      },
-      "deliverables": [
-        "UI/UX Design",
-        "Responsive Development",
-        "Booking System Integration",
-        "CMS Integration"
-      ],
-      "process": [
-        "Discovery & Research",
-        "Concept Development",
-        "Design Execution",
-        "Client Feedback",
-        "Final Delivery"
-      ],
-      "outcome": "Delivered a responsive hotel website that improved online bookings and enhanced guest engagement."
-    },
-    {
-      "id": "nairobi-merchants",
-      "slug": "nairobi-merchants",
-      "clientName": "Nairobi Merchants",
-      "category": "Website Design",
-      "description": "A comprehensive e-commerce platform designed to connect local artisans with global audiences through seamless digital experiences.",
-      "tags": [
-        "Website Design",
-        "E-Commerce",
-        "UI/UX Design",
-        "Digital Catalog"
-      ],
-      "year": "2024",
-      "featured": true,
-      "media": [
-        {
-          "path": "/portfolio/nairobi-merchants/Screenshot (71).png",
-          "type": "image",
-          "ext": ".png"
-        },
-        {
-          "path": "/portfolio/nairobi-merchants/Screenshot (72).png",
-          "type": "image",
-          "ext": ".png"
-        },
-        {
-          "path": "/portfolio/nairobi-merchants/Screenshot (73).png",
-          "type": "image",
-          "ext": ".png"
-        },
-        {
-          "path": "/portfolio/nairobi-merchants/Screenshot (74).png",
-          "type": "image",
-          "ext": ".png"
-        },
-        {
-          "path": "/portfolio/nairobi-merchants/Screenshot (75).png",
-          "type": "image",
-          "ext": ".png"
-        },
-        {
-          "path": "/portfolio/nairobi-merchants/Screenshot (76).png",
-          "type": "image",
-          "ext": ".png"
-        },
-        {
-          "path": "/portfolio/nairobi-merchants/Screenshot (77).png",
-          "type": "image",
-          "ext": ".png"
-        }
-      ],
-      "thumbnail": "/portfolio/nairobi-merchants/Screenshot (72).png",
-      "deliverables": [
-        "E-Commerce UI/UX Design",
-        "Product Catalog System",
-        "Mobile-First Responsive Design",
-        "Payment Gateway Integration",
-        "Admin Dashboard",
-        "SEO & Performance Optimization"
-      ],
-      "process": [
-        "Client Discovery & Market Research",
-        "User Persona Development",
-        "Wireframing & Information Architecture",
-        "High-Fidelity UI Design",
-        "Interactive Prototyping",
-        "Development Handoff & QA"
-      ],
-      "outcome": "Delivered a high-converting digital catalog that increased online sales by 40% and reduced bounce rate by 25%.",
-      "projectTitle": "Digital Marketplace & E-Commerce Platform",
-      "heroImage": "/portfolio/nairobi-merchants/Screenshot (74).png",
-      "caseStudy": {
-        "overview": "Nairobi Merchants is a forward-thinking e-commerce platform built to showcase and sell authentic Kenyan artisan goods to a global audience. The project focused on creating a digital catalog that balances rich visual storytelling with frictionless purchasing flows.",
-        "clientObjective": "Transform a fragmented collection of artisan products into a unified, premium online shopping experience that builds trust, drives conversions, and scales with the merchant community.",
-        "myRole": "Sole UX/UI Designer and Front-End Developer responsible for end-to-end design, responsive prototyping, and implementation of the digital catalog and checkout experience.",
-        "designChallenges": "Balancing cultural authenticity with modern e-commerce patterns, supporting high-resolution product photography, ensuring fast load times on mobile networks, and designing for both tech-savvy and first-time online shoppers.",
-        "researchStrategy": "Conducted stakeholder interviews with 12 local merchants, analyzed competitor catalogs, performed usability testing on three checkout flows, and mapped user journeys from discovery to delivery.",
-        "designProcess": "Started with low-fidelity wireframes to validate information architecture, progressed through high-fidelity mockups with iterative feedback cycles, then built a functional prototype using React and Tailwind CSS for real-world validation.",
-        "screenshotsOrder": [
-          "/portfolio/nairobi-merchants/Screenshot (72).png",
-          "/portfolio/nairobi-merchants/Screenshot (73).png",
-          "/portfolio/nairobi-merchants/Screenshot (71).png",
-          "/portfolio/nairobi-merchants/Screenshot (74).png",
-          "/portfolio/nairobi-merchants/Screenshot (75).png",
-          "/portfolio/nairobi-merchants/Screenshot (76).png",
-          "/portfolio/nairobi-merchants/Screenshot (77).png"
-        ],
-        "screenshotSections": [
-          {
-            "title": "Homepage & Landing Experience",
-            "images": [
-              "Screenshot (72).png",
-              "Screenshot (73).png"
-            ]
-          },
-          {
-            "title": "Product Catalogue & Browsing",
-            "images": [
-              "Screenshot (71).png",
-              "Screenshot (73).png"
-            ]
-          },
-          {
-            "title": "Product Details",
-            "images": [
-              "Screenshot (74).png"
-            ]
-          },
-          {
-            "title": "Mobile Experience",
-            "images": [
-              "Screenshot (75).png"
-            ]
-          },
-          {
-            "title": "Desktop Experience",
-            "images": [
-              "Screenshot (72).png",
-              "Screenshot (74).png"
-            ]
-          },
-          {
-            "title": "User Interface & Navigation",
-            "images": [
-              "Screenshot (76).png"
-            ]
-          },
-          {
-            "title": "Responsive Design",
-            "images": [
-              "Screenshot (71).png",
-              "Screenshot (75).png"
-            ]
-          }
-        ],
-        "keyFeatures": [
-          "Dynamic product catalog with advanced filtering",
-          "Wishlist and saved items functionality",
-          "Multi-variant product support (size, color, material)",
-          "Mobile-first responsive design with offline support",
-          "Integrated M-Pesa and card payment gateways",
-          "Merchant onboarding dashboard with analytics"
-        ],
-        "technologies": [
-          "React",
-          "Next.js",
-          "TypeScript",
-          "Tailwind CSS",
-          "Framer Motion",
-          "M-Pesa Daraja API",
-          "Stripe",
-          "Sanity CMS",
-          "Vercel"
-        ],
-        "finalOutcome": "The final platform launched with zero critical UX issues, achieved a Core Web Vitals score of 95+, and received positive feedback from both merchants and early customers for its intuitive navigation and premium aesthetic.",
-        "businessImpact": "Within the first quarter post-launch, the platform drove a 40% increase in artisan revenue, reduced cart abandonment by 25%, and onboarded 85+ active merchants with minimal training required.",
-        "lessonsLearned": "Designing for emerging markets requires empathy for connectivity constraints, clarity over cleverness in UI, and co-creation with users rather than assumption-driven design. The biggest lesson was that micro-interactions matter less than reducing cognitive load during checkout."
       }
     },
     {
@@ -602,11 +744,170 @@
       "outcome": "Created compelling motion content that boosted social media engagement and brand storytelling."
     },
     {
+      "id": "nairobi-merchants",
+      "slug": "nairobi-merchants",
+      "clientName": "Nairobi Merchants",
+      "category": "Website Design",
+      "description": "A comprehensive e-commerce platform designed to connect local artisans with global audiences through seamless digital experiences.",
+      "tags": [
+        "Website Design",
+        "E-Commerce",
+        "UI/UX Design",
+        "Digital Catalog"
+      ],
+      "year": "2024",
+      "featured": true,
+      "media": [
+        {
+          "path": "/portfolio/nairobi-merchants/Screenshot (71).png",
+          "type": "image",
+          "ext": ".png"
+        },
+        {
+          "path": "/portfolio/nairobi-merchants/Screenshot (72).png",
+          "type": "image",
+          "ext": ".png"
+        },
+        {
+          "path": "/portfolio/nairobi-merchants/Screenshot (73).png",
+          "type": "image",
+          "ext": ".png"
+        },
+        {
+          "path": "/portfolio/nairobi-merchants/Screenshot (74).png",
+          "type": "image",
+          "ext": ".png"
+        },
+        {
+          "path": "/portfolio/nairobi-merchants/Screenshot (75).png",
+          "type": "image",
+          "ext": ".png"
+        },
+        {
+          "path": "/portfolio/nairobi-merchants/Screenshot (76).png",
+          "type": "image",
+          "ext": ".png"
+        },
+        {
+          "path": "/portfolio/nairobi-merchants/Screenshot (77).png",
+          "type": "image",
+          "ext": ".png"
+        }
+      ],
+      "thumbnail": "/portfolio/nairobi-merchants/Screenshot (72).png",
+      "deliverables": [
+        "E-Commerce UI/UX Design",
+        "Product Catalog System",
+        "Mobile-First Responsive Design",
+        "Payment Gateway Integration",
+        "Admin Dashboard",
+        "SEO & Performance Optimization"
+      ],
+      "process": [
+        "Client Discovery & Market Research",
+        "User Persona Development",
+        "Wireframing & Information Architecture",
+        "High-Fidelity UI Design",
+        "Interactive Prototyping",
+        "Development Handoff & QA"
+      ],
+      "outcome": "Delivered a high-converting digital catalog that increased online sales by 40% and reduced bounce rate by 25%.",
+      "liveUrl": "https://nairobi-merchants.example.com",
+      "projectTitle": "Digital Marketplace & E-Commerce Platform",
+      "heroImage": "/portfolio/nairobi-merchants/Screenshot (74).png",
+      "caseStudy": {
+        "overview": "Nairobi Merchants is a forward-thinking e-commerce platform built to showcase and sell authentic Kenyan artisan goods to a global audience. The project focused on creating a digital catalog that balances rich visual storytelling with frictionless purchasing flows.",
+        "clientObjective": "Transform a fragmented collection of artisan products into a unified, premium online shopping experience that builds trust, drives conversions, and scales with the merchant community.",
+        "myRole": "Sole UX/UI Designer and Front-End Developer responsible for end-to-end design, responsive prototyping, and implementation of the digital catalog and checkout experience.",
+        "designChallenges": "Balancing cultural authenticity with modern e-commerce patterns, supporting high-resolution product photography, ensuring fast load times on mobile networks, and designing for both tech-savvy and first-time online shoppers.",
+        "researchStrategy": "Conducted stakeholder interviews with 12 local merchants, analyzed competitor catalogs, performed usability testing on three checkout flows, and mapped user journeys from discovery to delivery.",
+        "designProcess": "Started with low-fidelity wireframes to validate information architecture, progressed through high-fidelity mockups with iterative feedback cycles, then built a functional prototype using React and Tailwind CSS for real-world validation.",
+        "screenshotsOrder": [
+          "/portfolio/nairobi-merchants/Screenshot (72).png",
+          "/portfolio/nairobi-merchants/Screenshot (73).png",
+          "/portfolio/nairobi-merchants/Screenshot (71).png",
+          "/portfolio/nairobi-merchants/Screenshot (74).png",
+          "/portfolio/nairobi-merchants/Screenshot (75).png",
+          "/portfolio/nairobi-merchants/Screenshot (76).png",
+          "/portfolio/nairobi-merchants/Screenshot (77).png"
+        ],
+        "screenshotSections": [
+          {
+            "title": "Homepage & Landing Experience",
+            "images": [
+              "Screenshot (72).png",
+              "Screenshot (73).png"
+            ]
+          },
+          {
+            "title": "Product Catalogue & Browsing",
+            "images": [
+              "Screenshot (71).png",
+              "Screenshot (73).png"
+            ]
+          },
+          {
+            "title": "Product Details",
+            "images": [
+              "Screenshot (74).png"
+            ]
+          },
+          {
+            "title": "Mobile Experience",
+            "images": [
+              "Screenshot (75).png"
+            ]
+          },
+          {
+            "title": "Desktop Experience",
+            "images": [
+              "Screenshot (72).png",
+              "Screenshot (74).png"
+            ]
+          },
+          {
+            "title": "User Interface & Navigation",
+            "images": [
+              "Screenshot (76).png"
+            ]
+          },
+          {
+            "title": "Responsive Design",
+            "images": [
+              "Screenshot (71).png",
+              "Screenshot (75).png"
+            ]
+          }
+        ],
+        "keyFeatures": [
+          "Dynamic product catalog with advanced filtering",
+          "Wishlist and saved items functionality",
+          "Multi-variant product support (size, color, material)",
+          "Mobile-first responsive design with offline support",
+          "Integrated M-Pesa and card payment gateways",
+          "Merchant onboarding dashboard with analytics"
+        ],
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion",
+          "M-Pesa Daraja API",
+          "Stripe",
+          "Sanity CMS",
+          "Vercel"
+        ],
+        "finalOutcome": "The final platform launched with zero critical UX issues, achieved a Core Web Vitals score of 95+, and received positive feedback from both merchants and early customers for its intuitive navigation and premium aesthetic.",
+        "businessImpact": "Within the first quarter post-launch, the platform drove a 40% increase in artisan revenue, reduced cart abandonment by 25%, and onboarded 85+ active merchants with minimal training required.",
+        "lessonsLearned": "Designing for emerging markets requires empathy for connectivity constraints, clarity over cleverness in UI, and co-creation with users rather than assumption-driven design. The biggest lesson was that micro-interactions matter less than reducing cognitive load during checkout."
+      }
+    },
+    {
       "id": "websites",
       "slug": "websites",
       "clientName": "Kim Designs Portfolio",
       "category": "Website Design",
-      "projectTitle": "Personal Creative Portfolio",
       "description": "A premium personal creative portfolio website featuring immersive animations, glassmorphism design, and seamless navigation.",
       "tags": [
         "Portfolio",
@@ -674,6 +975,22 @@
         }
       ],
       "thumbnail": "/portfolio/websites/Screenshot (78).png",
+      "deliverables": [
+        "UI/UX Design",
+        "Responsive Development",
+        "Framer Motion Animations",
+        "SEO Optimization"
+      ],
+      "process": [
+        "Discovery & Research",
+        "Concept Development",
+        "Design Execution",
+        "Client Feedback",
+        "Final Delivery"
+      ],
+      "outcome": "Delivered a high-performance portfolio website with immersive animations and premium aesthetic.",
+      "liveUrl": "https://kimdesigns.example.com",
+      "projectTitle": "Personal Creative Portfolio",
       "heroImage": "/portfolio/websites/Screenshot (78).png",
       "caseStudy": {
         "screenshotsOrder": [
@@ -727,21 +1044,7 @@
             ]
           }
         ]
-      },
-      "deliverables": [
-        "UI/UX Design",
-        "Responsive Development",
-        "Framer Motion Animations",
-        "SEO Optimization"
-      ],
-      "process": [
-        "Discovery & Research",
-        "Concept Development",
-        "Design Execution",
-        "Client Feedback",
-        "Final Delivery"
-      ],
-      "outcome": "Delivered a high-performance portfolio website with immersive animations and premium aesthetic."
+      }
     }
   ],
   "categories": [
@@ -751,28 +1054,20 @@
     },
     {
       "id": "Branding",
-      "label": "Branding"
+      "label": "Brand Identity"
     },
     {
-      "id": "Website Design",
-      "label": "Websites"
+      "id": "Marketing Campaigns",
+      "label": "Posters"
     },
     {
       "id": "Motion Graphics",
       "label": "Motion Graphics"
     },
     {
-      "id": "Marketing Campaigns",
-      "label": "Campaigns"
-    },
-    {
-      "id": "Print Design",
-      "label": "Print"
-    },
-    {
-      "id": "Social Media",
-      "label": "Social Media"
+      "id": "Website Design",
+      "label": "Websites"
     }
   ],
-  "generatedAt": "2026-07-02T08:32:03.858Z"
+  "generatedAt": "2026-07-07T16:25:00.340Z"
 }

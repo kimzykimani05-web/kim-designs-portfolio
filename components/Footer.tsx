@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Mail, 
   MessageCircle,
@@ -47,14 +48,20 @@ const Footer = () => {
          <div className="py-12 sm:py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8">
            {/* Brand & Description */}
            <div className="lg:col-span-4 sm:col-span-2">
-             <Link href="/" className="flex items-center space-x-2 sm:space-x-3 mb-5 sm:mb-6">
-               <div className="h-9 w-9 sm:h-10 sm:w-10 bg-gradient-to-br from-brand-cyan to-brand-purple rounded-xl flex items-center justify-center text-white font-bold text-xs sm:text-sm">
-                 JK
-               </div>
-               <span className="text-lg sm:text-xl font-bold text-light-primary">
-                 Kim<span className="text-brand-cyan">Designs</span>
-               </span>
-             </Link>
+              <Link href="/" className="group flex items-center space-x-2 sm:space-x-3 mb-5 sm:mb-6 outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-primary rounded-xl" aria-label="Kim Designs - Home">
+                <div className="relative h-9 w-9 shrink-0 sm:h-10 sm:w-10 rounded-xl overflow-hidden shadow-md shadow-black/25 ring-1 ring-white/10 transition-all duration-300 group-hover:scale-[1.04] group-hover:ring-brand-cyan/40 group-hover:shadow-[0_0_20px_-4px_rgba(0,198,255,0.5)]">
+                  <Image
+                    src="/my-logo.png"
+                    alt="Kim Designs Logo"
+                    fill
+                    sizes="40px"
+                    className="object-cover"
+                  />
+                </div>
+                <span className="text-lg sm:text-xl font-bold text-light-primary">
+                  Kim<span className="text-brand-cyan">Designs</span>
+                </span>
+              </Link>
              <p className="text-light-secondary leading-relaxed max-w-sm mb-5 sm:mb-6 text-sm sm:text-base">
                Nairobi-based Graphic Designer specializing in branding, visual communication, motion graphics, video editing, websites, and marketing design.
              </p>
